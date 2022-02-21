@@ -1,0 +1,22 @@
+{
+  "name": "@zuplo/brandicons-react",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/zuplo/brandicons#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zuplo/brandicons.git"
+  },
+  "files": [
+    "outline",
+    "solid"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">= 16"
+  }
+}

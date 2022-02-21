@@ -22,8 +22,6 @@ jobs:
 
       - run: yarn build
 
-      - run: yarn build-react
-
       - run: node ./scripts/set-package-version.js react/package.json
 
       - run: npm publish

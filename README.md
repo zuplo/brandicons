@@ -4,10 +4,10 @@ A copy of heroicons but with brand's logos. Good place to find brand vectors is 
 
 ## Basic Usage
 
-The quickest way to use these icons is to simply copy the source for the icon you need from [heroicons.com](https://heroicons.com) and inline it directly into your HTML:
+The quickest way to use these icons is to simply copy the source for the icon you need from [optimized](https://github.com/zuplo/brandicons/tree/main/optimized) and inline it directly into your HTML:
 
 ```html
-<svg class="h-6 w-6 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path
     stroke-linecap="round"
     stroke-linejoin="round"
@@ -17,7 +17,7 @@ The quickest way to use these icons is to simply copy the source for the icon yo
 </svg>
 ```
 
-Both icon styles are preconfigured to be stylable by setting the `color` CSS property, either manually or using utility classes like `text-gray-500` in a framework like [Tailwind CSS](https://tailwindcss.com).
+Unlike heroicons, these icons are not meant to be colored with styles.
 
 ## React
 
@@ -30,7 +30,7 @@ npm install @zuplo/brandicons-react
 Now each icon can be imported individually as a React component:
 
 ```js
-import { SalesforceIcon } from '@zuplo/brandicons-react/solid'
+import { SalesforceIcon } from '@zuplo/brandicons-react'
 
 function MyComponent() {
   return (
@@ -42,20 +42,18 @@ function MyComponent() {
 }
 ```
 
-The 20x20 solid icons can be imported from `@zuplo/brandicons-react`.
+The 20x20 icons can be imported from `@zuplo/brandicons-react`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
-
-[Browse the full list of icon names on UNPKG &rarr;](https://unpkg.com/browse/@heroicons/react/outline/)
 
 ## Vue
 
 _Note that this library currently only supports Vue 3._
 
-First, install `@heroicons/vue` from npm:
+First, install `@zuplo/brandicons-vue` from npm:
 
 ```sh
-npm install @heroicons/vue
+npm install @zuplo/brandicons-vue
 ```
 
 Now each icon can be imported individually as a Vue component:
@@ -69,19 +67,17 @@ Now each icon can be imported individually as a Vue component:
 </template>
 
 <script>
-import { BeakerIcon } from '@heroicons/vue/solid'
+import { SalesforceIcon } from '@zuplo/brandicons-vue'
 
 export default {
-  components: { BeakerIcon },
+  components: { SalesforceIcon },
 }
 </script>
 ```
 
-The 20x20 solid icons can be imported from `@zuplo/brandicons-vue/solid`.
+The 20x20 icons can be imported from `@zuplo/brandicons-vue`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
-
-[Browse the full list of icon names on UNPKG &rarr;](https://unpkg.com/browse/@heroicons/vue/outline/)
 
 ## License
 

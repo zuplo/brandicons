@@ -10,7 +10,7 @@
     "url": "https://github.com/zuplo/brandicons.git"
   },
   "files": [
-    "icons"
+    "logos"
   ],
   "publishConfig": {
     "access": "public"

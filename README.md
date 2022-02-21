@@ -21,28 +21,28 @@ Both icon styles are preconfigured to be stylable by setting the `color` CSS pro
 
 ## React
 
-First, install `@heroicons/react` from npm:
+First, install `@zuplo/brandicons-react` from npm:
 
 ```sh
-npm install @heroicons/react
+npm install @zuplo/brandicons-react
 ```
 
 Now each icon can be imported individually as a React component:
 
 ```js
-import { BeakerIcon } from '@heroicons/react/solid'
+import { SalesforceIcon } from '@zuplo/brandicons-react/solid'
 
 function MyComponent() {
   return (
     <div>
-      <BeakerIcon className="h-5 w-5 text-blue-500" />
+      <SalesforceIcon className="h-5 w-5" />
       <p>...</p>
     </div>
   )
 }
 ```
 
-The 24x24 outline icons can be imported from `@heroicons/react/outline`, and the 20x20 solid icons can be imported from `@heroicons/react/solid`.
+The 20x20 solid icons can be imported from `@zuplo/brandicons-react`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
 
@@ -77,7 +77,7 @@ export default {
 </script>
 ```
 
-The 24x24 outline icons can be imported from `@heroicons/vue/outline`, and the 20x20 solid icons can be imported from `@heroicons/vue/solid`.
+The 20x20 solid icons can be imported from `@zuplo/brandicons-vue/solid`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
 

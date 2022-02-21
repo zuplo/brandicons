@@ -10,7 +10,6 @@
     "url": "https://github.com/zuplo/brandicons.git"
   },
   "files": [
-    "outline",
     "solid"
   ],
   "publishConfig": {

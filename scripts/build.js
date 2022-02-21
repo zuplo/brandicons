@@ -105,9 +105,10 @@ function main(package) {
 
   Promise.all([rimraf(`./${package}/solid/*`)])
     .then(() =>
+      Promise.all([buildIcons(package, 'solid', 'esm'), buildIcons(package, 'solid', 'cjs')])
+    )
+    .then(() =>
       Promise.all([
-        buildIcons(package, 'solid', 'esm'),
-        buildIcons(package, 'solid', 'cjs'),
         fs.writeFile(`./${package}/solid/package.json`, `{"module": "./esm/index.js"}`, 'utf8'),
         fs.writeFile(`./${package}/solid/esm/package.json`, `{"type": "module"}`, 'utf8'),
       ])

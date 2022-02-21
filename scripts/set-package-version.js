@@ -1,3 +1,6 @@
+const path = require('path')
+const fs = require('fs')
+
 const pkgPath = path.resolve(process.cwd(), process.argv[0])
 const json = fs.readFileSync(pkgPath, 'utf-8')
 const pkg = JSON.parse(json)

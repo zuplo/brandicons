@@ -2,8 +2,6 @@
 
 A copy of heroicons but with brand's logos. Good place to find brand vectors is here: https://www.vectorlogo.zone/
 
-Source code licensed under MIT, all logos are Copyright their respective brands.
-
 ## Basic Usage
 
 The quickest way to use these icons is to simply copy the source for the icon you need from [optimized](https://github.com/zuplo/brandicons/tree/main/optimized) and inline it directly into your HTML:
@@ -83,4 +81,4 @@ Icons use an upper camel case naming convention and are always suffixed with the
 
 ## License
 
-This library is MIT licensed.
+This library is MIT licensed. All logos and other brand marks are Copyright their respective brands.

@@ -103,14 +103,21 @@ async function buildIcons(package, style, format) {
 function main(package) {
   console.log(`Building ${package} package...`)
 
-  Promise.all([rimraf(`./${package}/logos/*`)])
+  Promise.all([rimraf(`./${package}/logos/*`), rimraf(`./${package}/wordmarks/*`)])
     .then(() =>
-      Promise.all([buildIcons(package, 'logos', 'esm'), buildIcons(package, 'logos', 'cjs')])
+      Promise.all([
+        buildIcons(package, 'logos', 'esm'),
+        buildIcons(package, 'logos', 'cjs'),
+        buildIcons(package, 'wordmarks', 'esm'),
+        buildIcons(package, 'wordmarks', 'cjs'),
+      ])
     )
     .then(() =>
       Promise.all([
         fs.writeFile(`./${package}/logos/package.json`, `{"module": "./esm/index.js"}`, 'utf8'),
         fs.writeFile(`./${package}/logos/esm/package.json`, `{"type": "module"}`, 'utf8'),
+        fs.writeFile(`./${package}/wordmarks/package.json`, `{"module": "./esm/index.js"}`, 'utf8'),
+        fs.writeFile(`./${package}/wordmarks/esm/package.json`, `{"type": "module"}`, 'utf8'),
       ])
     )
     .then(() => console.log(`Finished building ${package} package.`))

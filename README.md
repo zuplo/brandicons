@@ -2,6 +2,8 @@
 
 A copy of heroicons but with brand's logos. Good place to find brand vectors is here: https://www.vectorlogo.zone/
 
+Source code licensed under MIT, all logos are Copyright their respective brands.
+
 ## Basic Usage
 
 The quickest way to use these icons is to simply copy the source for the icon you need from [optimized](https://github.com/zuplo/brandicons/tree/main/optimized) and inline it directly into your HTML:
@@ -21,16 +23,16 @@ Unlike heroicons, these icons are not meant to be colored with styles.
 
 ## React
 
-First, install `@zuplo/brandicons-react` from npm:
+First, install `@brandicons/react` from npm:
 
 ```sh
-npm install @zuplo/brandicons-react
+npm install @brandicons/react
 ```
 
 Now each icon can be imported individually as a React component:
 
 ```js
-import { SalesforceIcon } from '@zuplo/brandicons-react'
+import { SalesforceIcon } from '@brandicons/react'
 
 function MyComponent() {
   return (
@@ -42,7 +44,7 @@ function MyComponent() {
 }
 ```
 
-The 20x20 icons can be imported from `@zuplo/brandicons-react`.
+The 20x20 icons can be imported from `@brandicons/react`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
 
@@ -50,10 +52,10 @@ Icons use an upper camel case naming convention and are always suffixed with the
 
 _Note that this library currently only supports Vue 3._
 
-First, install `@zuplo/brandicons-vue` from npm:
+First, install `@brandicons/vue` from npm:
 
 ```sh
-npm install @zuplo/brandicons-vue
+npm install @brandicons/vue
 ```
 
 Now each icon can be imported individually as a Vue component:
@@ -67,7 +69,7 @@ Now each icon can be imported individually as a Vue component:
 </template>
 
 <script>
-import { SalesforceIcon } from '@zuplo/brandicons-vue'
+import { SalesforceIcon } from '@brandicons/vue'
 
 export default {
   components: { SalesforceIcon },
@@ -75,7 +77,7 @@ export default {
 </script>
 ```
 
-The 20x20 icons can be imported from `@zuplo/brandicons-vue`.
+The 20x20 icons can be imported from `@brandicons/vue`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
 

@@ -1,5 +1,5 @@
 {
-  "name": "@zuplo/brandicons",
+  "name": "@brandicons/content",
   "version": "1.0.0",
   "license": "MIT",
   "files": [
@@ -7,10 +7,11 @@
     "README.md"
   ],
   "scripts": {
-    "build": "npm run build-logos && npm run build-react && npm run build-vue",
+    "build": "npm run build-logos && npm run build-wordmarks && npm run build-react && npm run build-vue",
     "build-react": "node ./scripts/build.js react",
     "build-vue": "node ./scripts/build.js vue",
-    "build-logos": "rimraf ./logos ./optimized/logos && svgo --config=svgo.logos.yaml -f ./src/logos -o ./optimized/logos --pretty --indent=2 && cp -R ./optimized/logos ./logos"
+    "build-logos": "rimraf ./logos ./optimized/logos && svgo --config=svgo.logos.yaml -f ./src/logos -o ./optimized/logos --pretty --indent=2 && cp -R ./optimized/logos ./logos",
+    "build-wordmarks": "rimraf ./logos ./optimized/wordmarks && svgo --config=svgo.wordmarks.yaml -f ./src/wordmarks -o ./optimized/wordmarks --pretty --indent=2 && cp -R ./optimized/wordmarks ./wordmarks"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

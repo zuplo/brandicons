@@ -103,11 +103,17 @@ async function buildIcons(package, style, format) {
 function main(package) {
   console.log(`Building ${package} package...`)
 
-  Promise.all([rimraf(`./${package}/logos/*`), rimraf(`./${package}/wordmarks/*`)])
+  Promise.all([
+    rimraf(`./${package}/logos/*`),
+    rimraf(`./${package}/wordmarks/*`),
+    rimraf(`./${package}/solid/*`),
+  ])
     .then(() =>
       Promise.all([
         buildIcons(package, 'logos', 'esm'),
         buildIcons(package, 'logos', 'cjs'),
+        buildIcons(package, 'solid', 'esm'),
+        buildIcons(package, 'solid', 'cjs'),
         buildIcons(package, 'wordmarks', 'esm'),
         buildIcons(package, 'wordmarks', 'cjs'),
       ])
@@ -116,6 +122,8 @@ function main(package) {
       Promise.all([
         fs.writeFile(`./${package}/logos/package.json`, `{"module": "./esm/index.js"}`, 'utf8'),
         fs.writeFile(`./${package}/logos/esm/package.json`, `{"type": "module"}`, 'utf8'),
+        fs.writeFile(`./${package}/solid/package.json`, `{"module": "./esm/index.js"}`, 'utf8'),
+        fs.writeFile(`./${package}/solid/esm/package.json`, `{"type": "module"}`, 'utf8'),
         fs.writeFile(`./${package}/wordmarks/package.json`, `{"module": "./esm/index.js"}`, 'utf8'),
         fs.writeFile(`./${package}/wordmarks/esm/package.json`, `{"type": "module"}`, 'utf8'),
       ])

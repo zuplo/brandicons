@@ -7,10 +7,11 @@
     "README.md"
   ],
   "scripts": {
-    "build": "npm run build-logos && npm run build-wordmarks && npm run build-react && npm run build-vue",
+    "build": "npm run build-logos && npm run build-logos && npm run build-wordmarks && npm run build-react && npm run build-vue",
     "build-react": "node ./scripts/build.js react",
     "build-vue": "node ./scripts/build.js vue",
     "build-logos": "rimraf ./logos ./optimized/logos && svgo --config=svgo.logos.yaml -f ./src/logos -o ./optimized/logos --pretty --indent=2 && cp -R ./optimized/logos ./logos",
+    "build-solid": "rimraf ./logos ./optimized/solid && svgo --config=svgo.solid.yaml -f ./src/logos -o ./optimized/solid --pretty --indent=2 && cp -R ./optimized/solid ./solid",
     "build-wordmarks": "rimraf ./logos ./optimized/wordmarks && svgo --config=svgo.wordmarks.yaml -f ./src/wordmarks -o ./optimized/wordmarks --pretty --indent=2 && cp -R ./optimized/wordmarks ./wordmarks"
   },
   "devDependencies": {
